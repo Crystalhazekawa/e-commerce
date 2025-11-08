@@ -187,7 +187,10 @@ body {
   border-radius: 6px;
   transition: all 0.3s ease;
 }
-
+.hero-box button:hover {
+  background: #fff;
+  color: #1F2937;
+}
 .hero-box {
   background: rgba(31,41,55,0.95);
   padding: 40px 30px;
@@ -220,8 +223,8 @@ body {
     left: 45%;
     top: 50%;
     transform: translate(-50%, -50%); 
-    width: 200px;
-    height: 200px; 
+    width: 300px;
+    height: 300px; 
     background: #fff;
     border-radius: 50%;
     z-index: 1;
@@ -230,9 +233,9 @@ body {
 .model-img {
   position: absolute;
   z-index: 10;
-  height: 60%;
+  height: 65%;
   width: auto;
-  left: 20%;
+  left: 30%;
 }
 /* ===== HIGHLIGHTS ===== */
 .highlights h2 {
@@ -242,7 +245,7 @@ body {
 }
 .highlight-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 15px;
 }
 .highlight-card {
@@ -251,19 +254,22 @@ body {
   border-radius: 10px;
 }
 .highlight-card img {
+  height: 100%;
   width: 100%;
-  transition: transform 0.4s;
+  object-fit: cover;
+  transition: transform 0.4s ease;
 }
 .highlight-card:hover img {
   transform: scale(1.1);
 }
 .overlay {
+  text-align: center;
   position: absolute;
-  bottom: 10%;
-  left: 10%;
+  bottom: 50%;
+  left: 20%;
   color: white;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 30px;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
 }
 
@@ -293,17 +299,17 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 40px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .brands-grid img {
-  width: 100px;
+  width: 90px;
   filter: grayscale(100%);
   transition: filter 0.3s ease;
 }
 
 .brands-grid img:hover {
-  filter: grayscale(0%);
+  filter: grayscale(8%);
 }
 
 /* ===== PROMO BANNER ===== */
@@ -313,10 +319,10 @@ body {
   color: white;
 }
 .promo-banner img {
-  width: 100%;
-  height: 350px;
+  width: 95%;
+  height: 600px;
   object-fit: cover;
-  filter: brightness(70%);
+  filter: brightness(100%);
 }
 .promo-content {
   position: absolute;
@@ -330,6 +336,8 @@ body {
   margin-bottom: 10px;
 }
 
+
+
 /* ===== FOOTER ===== */
 footer {
   background: #f5f5f5;
@@ -342,29 +350,37 @@ footer {
 }
 .footer-links {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 800px;
-  margin-bottom: 20px;
+  justify-content: space-evenly;
+  width: 80%;
+  max-width: 900px;
+  margin-bottom: 10px;
 }
-.footer-links div {
+.footer-links > div {
+  /* stack the heading and links vertically */
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 8px;
 }
 .footer-links h4 {
   font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  margin: 0 0 6px 0;
 }
 .footer-links a {
   text-decoration: none;
   color: #555;
+  font-size: 14px;
 }
 .social-icons img {
-  width: 24px;
-  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
 }
 .footer-bottom {
   color: #777;
   text-align: center;
+
 }
 
 /* ===== RESPONSIVE ===== */
@@ -378,7 +394,8 @@ footer {
   }
   .footer-links {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 20px;
   }
 }
